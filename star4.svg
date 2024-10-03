@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="500" viewBox="0 0 750 500">
+    <path style="stroke:yellow; fill:yellow; stroke-width:3">
+        <animate attributeName="d"
+                 from="M50,100
+                       Q100,100 100,0
+                       Q100,100 150,100
+                       Q100,100 100,200
+                       Q100 100 50,100z"
+                 to="M0,100
+                     Q100,100 100,50
+                     Q100,100 200,100
+                     Q100,100 100,150
+                     Q100,100 0,100z"
+                 repeatCount="indefinite"
+                 dur="0.3s"
+                 fill="freeze"/>
+    </path>
+</svg>
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Suemai</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="nav-toggle" id="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<nav class = "nav-bar" id="nav-bar">
+    <ul class = "nav-menu">
+        <li class="nav-item"><a href = "#home-section">Home</a></li>
+        <li class="nav-item"><a href = "#about-section">About me</a></li>
+        <li class="nav-item"><a href = "#projects-section">Projects</a></li>
+<!--        <li class="nav-item"><a href = "#">Experiences</a></li>-->
+        <li class="nav-item"><a href = "#contacts-section">Contact me</a></li>
+    </ul>
+</nav>
+
+<section id="home-section">
+    <h1 id="name">Soobeey Wu</h1>
+    <div id="kirby-container">
+        <img src="kirby.svg" id="kirby-svg" alt="image failed to load">
+    </div>
+</section>
+
+<section id="about-section">
+    <div id="cloud-container">
+        <div class="cloud" id="cloud1"></div>
+        <div class="cloud" id="cloud2"></div>
+        <div class="cloud" id="cloud3"></div>
+        <div class="cloud" id="cloud4"></div>
+        <div class="cloud" id="cloud5"></div>
+        <div class="cloud" id="cloud6"></div>
+        <div class="cloud" id="cloud7"></div>
+        <div class="cloud" id="cloud8"></div>
+    </div>
+    <h1>About Me</h1>
+    <p>An Oxford Brookes University graduate that studied Computer Science and Japanese Studies.</p>
+    <p>An aspiring software developer that learns languages and codes in their free time.</p>
+</section>
+
+<section id="projects-section">
+    <div id="sun">
+        <img src="images/sun.svg" alt="image failed to load"/>
+    </div>
+    <h1>Projects</h1>
+    <div class="projects">
+        <div class="project-card">
+            <div class="project-image">
+                <img id="stamp-app-img" src="images/iwaizumi.jpg" alt="image failed to load" >
+                <div class="overlay-image">
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+            <div class="project-info">
+                <h2>Japan Stamp App</h2>
+                <p>An app developed in collaboration with a friend that shows the locations of stamps in Japan and allows you to check off whether you have collected them. </p>
+                <div class="tags">
+                    <span>Java</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img id="menu-app-img" src="images/kyoto.jpg" alt="image failed to load">
+                <div class="overlay-image">
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+            <div class="project-info">
+                <h2>Menu app</h2>
+                <p>An app that is a small scale point-of-sale system that is able to take in orders and send copies of the receipts via bluetooth.  </p>
+                <div class="tags">
+                    <span>Kotlin</span>
+                    <span>On-going</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img id="website-img" src="images/sakura.jpg" alt="image failed to load">
+                <div class="overlay-image">
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+            <div class="project-info">
+                <h2>Portfolio Website</h2>
+                <p>A portfolio website that you are currently on.  </p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>On-going</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<section id="experiences-section">-->
+<!--    <h1>Experiences</h1>-->
+<!--</section>-->
+
+<section id="contacts-section">
+    <h1>Contact Me</h1>
+    <div class="contacts">
+        <div class="contact-card">
+            <div class="contact-icon" id="linkedin-card">
+                <img id="linkedin-img" src="images/linkedin.svg" alt="image failed to load"/>
+            </div>
+            <div class="contact-info" id="linkedin-info">
+                <h3>Professional portfolio including experiences</h3>
+                <a href="#" target="_blank">Take me here</a>
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon" id="github-card">
+                <img id="github-img" src="images/github.svg" alt="image failed to load">
+            </div>
+            <div class="contact-info" id="github-info">
+                <h3>Source code of all my projects</h3>
+                <a href="#" target="_blank">Take me here</a>
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon" id="email-card">
+                <img id="email-img" src="images/email.svg" alt="image failed to load">
+            </div>
+            <div class="contact-info" id="email-info">
+                <h3>If you would like to email me, link below </h3>
+                <a href="mailto:suemaei@outlook.com">Email me!</a>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-images">
+        <div class="grass-container"></div>
+        <div class="tiger-container"></div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

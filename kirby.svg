@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="250" viewBox="0 0 300 250" xmlns:xlink="http://www.w3.org/1999/xlink" >
+    <!-- kirby -->
+    <defs>
+        <g id="leg">
+            <ellipse style="stroke:black ; stroke-width:3 ; fill:#F52F64"
+                     cx="150" cy="150" rx="75" ry="35"/>
+        </g>
+
+        <g id="head">
+            <circle style="stroke:black ; stroke-width:3 ; fill:#F598B1"
+                    cx="300"  cy="300"  r="100" />
+        </g>
+
+        <g id="eye">
+            <ellipse style="stroke: black; stroke-width:3; fill: black"
+                     cx="500" cy="150" rx="10" ry="25"/>
+            <ellipse style="stroke:black; fill: white"
+                     cx="500" cy="140" rx="6" ry="12"/>
+            <path style="stroke:blue; stroke-width:1; fill:blue"
+                  d="M492,158
+		Q500,186 508,158
+		Q499,163 493,158Z"/>
+        </g>
+
+        <g id="cheek">
+            <ellipse style="stroke:#F56B96; fill:#F56B96"
+                     cx="500" cy="320" rx="15" ry="7"/>
+        </g>
+
+        <g id="mouth-outside">
+            <path style="stroke:black; stroke-width=1; fill:black"
+                  d="M600,300
+		Q630,284 660,300
+		C671,302 662,340 647,352
+		Q632,371 616,352
+		C598,335 594,312 600,300z"/>
+        </g>
+        <g id="mouth-inside">
+            <path style="stroke:pink; stroke-width=1; fill:#F52F64"
+                  d="M610,316
+		Q641,298 660,300
+		C671,302 662,340 647,352
+		Q632,371 616,352
+		C598,335 595,321 611,316Z"/>
+        </g>
+
+        <g id="leftArm">
+            <path style="stroke:black; stroke-width:3; fill:#F598B1"
+                  d="M198,228
+		Q80,265 196,302z"/>
+        </g>
+
+        <g id="rightArm">
+            <path style="stroke:black; stroke-width:3; fill:#F598B1"
+                  d="M550,450
+		A50,50 0 1 1 553,544"/>
+        </g>
+    </defs>
+
+    <defs>
+        <g id="mouth">
+            <use xlink:href="#mouth-outside"/>
+            <use xlink:href="#mouth-inside"/>
+        </g>
+    </defs>
+
+    <defs>
+        <g id="kirby">
+            <g transform="translate(350, 155)rotate(45)"><use xlink:href="#leg"/></g>
+            <g transform="translate(450, 400)rotate(145)"><use xlink:href="#leg"/></g>
+            <g transform="translate(20,40)"><use xlink:href="#leftArm"/></g>
+            <use xlink:href="#head"/>
+            <g transform="translate(0,-60) scale(0.7)"><use xlink:href="#rightArm"/></g>
+            <g transform="translate(20 120)scale(0.4 1)"><use xlink:href="#eye"/></g>
+            <g transform="translate(-60 120)scale(0.6 1)"><use xlink:href="#eye"/></g>
+            <g transform="translate(-240,-20)"><use xlink:href="#cheek"/></g>
+            <g transform="translate(100,190) scale(0.2 0.4)"><use xlink:href="#mouth"/></g>
+        </g></defs>
+
+    <!--warp star-->
+    <defs>
+        <g id="warpStar">
+            <!--warp star shadow-->
+            <g id="starship-shadow">
+                <path style="stroke:orange; stroke-width:3; fill:orange"
+                      d="M398,160
+			Q348,181 217,156
+			Q127,145 153,193
+			C1,239 4,258 135,289
+			C246,307 272,349 362,377
+			C462,425 453,417 506,354
+			C529,304 569,318 610,300
+			Q699,297 525,208
+			Q486,192 496,160
+			Q472,140 431,154Z"/>
+            </g>
+            <!--warp star main body-->
+            <g id="starship-main">
+                <path style="stroke:yellow; stroke-width:3; fill:yellow"
+                      d="M398,160
+			Q348,181 217,156
+			Q127,145 159,188
+			C0,239 0,258 151,250
+			C258,240 276.5,294.5 352,339
+			C456,418 466,396 485,336
+			C502,266 524,287 601,292
+			Q705,303 525,208
+			Q480,198.5 486,160
+			Q468,143 431,154Z"/>
+            </g>
+        </g>
+    </defs>
+
+    <!--both kirby and the warp star-->
+    <g id="starWarrior">
+        <g transform="translate(0,85)scale(0.35)"><use xlink:href="#warpStar"/></g>
+        <g transform="scale(0.4)"><use xlink:href="#kirby"/></g>
+    </g>
+
+</svg>
