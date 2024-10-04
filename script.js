@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const numStars4 = getRandomInt(15, 30);
     const numStars5 = getRandomInt(5, 10);
     const star4 ='star4.svg';
-    const star5 = 'star5.svg';
+    const star5 = 'images/star5.svg';
+    const star5AC = 'images/star5AC.svg';
 
     // For the motion path of kirby
     const kirby = document.querySelector('#kirby-svg');
@@ -48,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
         let size = 0;
         if(stars==='star4.svg'){
             size = getRandomInt(50, 100);
-        } else if(stars==='star5.svg'){
-            size = getRandomInt(150, 200);
+        } else {
+            size = getRandomInt(25, 50);
         }
         star.style.width = size + 'px';
         star.style.height = size + 'px';
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add stars to the stars container
     addStarsToContainer(starsContainer, numStars4, star4);
     addStarsToContainer(starsContainer, numStars5, star5);
+    addStarsToContainer(starsContainer, numStars5, star5AC);
 
     // Navigation
     nav_toggle.addEventListener('click', function() {

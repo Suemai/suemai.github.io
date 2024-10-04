@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 -20 100 200" xmlns:xlink="http://www.w3.org/1999/xlink" >
+    <!--5 pointed star-->
+    <defs>
+        <g id="5pointStar">
+            <path style="stroke:yellow; fill:yellow; stroke-width: 3"
+                  transform="scale(0.5)"
+                  d="M0,90
+		H100,90
+		L120,0 150,90
+		H100,250
+		L170,140 200,225 120,175 40,225 75,140z"/>
+            <!--animation to make it bigger
+            <animateTransform attributeName="transform"
+            attributeType="XML"
+            type="scale"
+            from="0 1"
+            to="1 1"
+            begin="0s"
+            dur="5s"
+            repeatcount="indefinite"
+            fill="freeze"/>
+            -->
+        </g>
+    </defs>
+
+    <defs>
+        <g id="rotating5Point-C">
+            <use xlink:href ="#5pointStar"/>
+            <animateTransform attributeName="transform"
+                              attributeType="XML"
+                              type="rotate"
+                              from="0 60 70"
+                              to="360 60 70"
+                              repeatCount="indefinite"
+                              dur="5s"/>
+        </g>
+    </defs>
+    <use xlink:href ="#rotating5Point-C"/>
+</svg>
