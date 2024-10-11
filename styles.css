@@ -608,39 +608,91 @@ img{
 }
 
 .contact-info button{
-    background-color: #fff;
-    background-image: none;
-    border-style: solid;
-    border-width: 2px;
-    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
-    color: #41403e;
+    position: relative;
     cursor: pointer;
+    margin: 0 30px;
     display: inline-block;
-    font-family: Neucha, sans-serif;
-    font-size: 1rem;
-    line-height: 23px;
-    transition: all 235ms ease-in-out;
+    padding: 8px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-weight: bold;
 }
 
-.contact-info button:hover {
-    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-    transform: translate3d(0, 2px, 0);
+.contact-info button::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -7px;
+    left: -7px;
+    transition: all 0.5s;
 }
 
-.contact-info button:hover {
-    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+.contact-info button:after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: -7px;
+    right: -7px;
+    transition: all 0.5s;
 }
+
+.contact-info button:hover:before,
+.contact-info button:hover:after{
+    height: 100%;
+    width: 100%;
+}
+
 
 #linkedin-info{
     background: #00B599;
+    button{
+        background: #0077B5;
+        color: antiquewhite;
+    }
+    ::before{
+        border-top: 3px solid #0077B5;
+        border-left: 3px solid #0077B5;
+    }
+    :after{
+        border-bottom: 3px solid #0077B5;
+        border-right: 3px solid #0077B5;
+    }
 }
 
 #github-info{
     background: #939393;
+    button{
+        background: #333;
+        color: antiquewhite;
+    }
+    ::before{
+        border-top: 3px solid #333;
+        border-left: 3px solid #333;
+    }
+    :after{
+        border-bottom: 3px solid #333;
+        border-right: 3px solid #333;
+    }
 }
 
 #email-info{
     background: #ED8AFF;
+    button{
+        background: #9900B5;
+        color: antiquewhite;
+    }
+    ::before{
+        border-top: 3px solid #9900B5;
+        border-left: 3px solid #9900B5;
+    }
+    :after{
+        border-bottom: 3px solid #9900B5;
+        border-right: 3px solid #9900B5;
+    }
 }
 
 .contact-card:hover .contact-icon{
