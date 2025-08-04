@@ -583,6 +583,10 @@ img{
 }
 
 @media (max-width: 768px) {
+    #kirby-container {
+        top: 60%;
+    }
+
     .project-card {
         flex-direction: column;
         align-items: center;
