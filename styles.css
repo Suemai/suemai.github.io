@@ -2,7 +2,6 @@
 
 html{
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body{
@@ -30,9 +29,9 @@ section{
     height: auto;
     padding-top: 100px;
     padding-bottom: 100px;
-
 }
 
+/* Home Section */
 #home-section{
     background-image: linear-gradient(to bottom, #000, #0617A6);
     width: 100%;
@@ -43,12 +42,12 @@ section{
     align-items: center;
     flex-direction: column;
     z-index: 0;
+}
 
-    h1{
-        font-size: 30px;
-        margin-bottom: 100px;
-        text-shadow: 1.5px 1.5px black;
-    }
+#home-section h1 {
+    font-size: 30px;
+    margin-bottom: 100px;
+    text-shadow: 1.5px 1.5px black;
 }
 
 #kirby-container{
@@ -89,6 +88,7 @@ section{
     }
 }
 
+/* About Section */
 #about-section{
     background-image: linear-gradient(to bottom, #0820E7, #62c1e5);
     justify-content: center;
@@ -96,32 +96,38 @@ section{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    overflow-x: hidden;
-    #text{
-        position: relative;
-        justify-content: center;
-        margin: 30px;
-        text-shadow: 1.5px 1.5px black;
-        z-index: 3;
-        h1{
-            font-size: 50px;
-        }
-        p{
-            font-size: 20px;
-        }
-    }
+    overflow: hidden; /* This will fix the horizontal overflow */
 }
 
+#about-section #text{
+    position: relative;
+    justify-content: center;
+    margin: 30px;
+    text-shadow: 1.5px 1.5px black;
+    z-index: 3;
+}
+
+#about-section #text h1{
+    font-size: 50px;
+}
+
+#about-section #text p{
+    font-size: 20px;
+}
+
+/* Projects Section */
 #projects-section{
     background: url("images/mountains.svg"), linear-gradient(to bottom, #62c1e5, #ffffff) no-repeat center;
     background-size: cover;
-    h1{
-        position: relative;
-        font-size: 50px;
-        text-shadow: 1.5px 1.5px #cea3e1;
-    }
 }
 
+#projects-section h1{
+    position: relative;
+    font-size: 50px;
+    text-shadow: 1.5px 1.5px #cea3e1;
+}
+
+/* Contacts Section */
 #contacts-section{
     background:
             url("images/bamboo.svg") -100px 100% repeat-x,
@@ -129,12 +135,14 @@ section{
             linear-gradient(to bottom, #688f4e, #b1d182);
     background-size: auto 100%;
     overflow: hidden;
-    h1{
-        font-size: 40px;
-        text-shadow: 1.5px 1.5px #084724;
-    }
 }
 
+#contacts-section h1{
+    font-size: 40px;
+    text-shadow: 1.5px 1.5px #084724;
+}
+
+/* Navigation */
 .nav-toggle{
     cursor: pointer;
     width: 35px;
@@ -144,42 +152,43 @@ section{
     top: 20px;
     right: 20px;
     z-index: 1000;
-    span{
-        display: inline-block;
-        position: absolute;
-        width: 45%;
-        height: 3px;
-        left: 14px;
-        background: white;
-        border-radius: 3px;
-        transition: all .4s;
-        &:nth-of-type(1) {
-            top: 17px;
-        }
-        &:nth-of-type(2) {
-            top: 25px;
-        }
-        &:nth-of-type(3) {
-            top: 33px;
-        }
-    }
 }
-.nav-toggle.active span{
-    &:nth-of-type(1) {
-        top: 18px;
-        left: 14px;
-        transform: translateY(6px) rotate(-45deg);
-        width: 40%;
-    }
-    &:nth-of-type(2) {
-        opacity: 0;
-    }
-    &:nth-of-type(3) {
-        top: 30px;
-        left: 14px;
-        transform: translateY(-6px) rotate(45deg);
-        width: 40%;
-    }
+
+.nav-toggle span{
+    display: inline-block;
+    position: absolute;
+    width: 45%;
+    height: 3px;
+    left: 14px;
+    background: white;
+    border-radius: 3px;
+    transition: all .4s;
+}
+
+.nav-toggle span:nth-of-type(1) {
+    top: 17px;
+}
+.nav-toggle span:nth-of-type(2) {
+    top: 25px;
+}
+.nav-toggle span:nth-of-type(3) {
+    top: 33px;
+}
+
+.nav-toggle.active span:nth-of-type(1) {
+    top: 18px;
+    left: 14px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 40%;
+}
+.nav-toggle.active span:nth-of-type(2) {
+    opacity: 0;
+}
+.nav-toggle.active span:nth-of-type(3) {
+    top: 30px;
+    left: 14px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 40%;
 }
 
 .nav-bar{
@@ -242,24 +251,27 @@ section{
 .nav-item{
     text-align: center;
     width: 100%;
-    a {
-        font-size: 20px;
-        color: #ec802f;
-        text-decoration: none;
-        padding: 20px;
-        display: block;
-        transition: background-color 0.3s;
-    }
-    a:hover{
-        transform: scale(1.1);
-        color: whitesmoke;
-    }
+}
+
+.nav-item a {
+    font-size: 20px;
+    color: #ec802f;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.nav-item a:hover{
+    transform: scale(1.1);
+    color: whitesmoke;
 }
 
 .nav-bar.active{
     right: 0;
 }
 
+/* Cloud Animations */
 #cloud-container{
     position: absolute;
     height: 100%;
@@ -288,12 +300,14 @@ section{
     100% { transform: translateX(0%); }
 }
 
+/* General Image Styles */
 img{
     width: 250px;
     height: 250px;
     object-position: center;
 }
 
+/* Scroll Animations */
 #sun{
     position: absolute;
     left: 30px;
@@ -344,7 +358,6 @@ img{
     opacity: 1;
     transform: translateX(0);
 }
-
 
 .project-card:hover{
     transform: scale(1.05);
@@ -407,19 +420,20 @@ img{
     align-content: center;
     flex: 1;
     padding: 10px;
-    h2{ text-align: center; }
-    p{ text-align: center; padding: 10px; margin-top: 0; }
-    .tags{
-        text-align: center;
-        margin-bottom: 10px;
-        span{
-            background-color: #eee;
-            border-radius: 4px;
-            padding: 4px 8px;
-            font-size: 0.9em;
-            gap: 10px;
-        }
-    }
+}
+
+.project-info h2 { text-align: center; }
+.project-info p { text-align: center; padding: 10px; margin-top: 0; }
+.project-info .tags{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.project-info .tags span{
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.9em;
+    gap: 10px;
 }
 
 .contacts{
@@ -470,8 +484,9 @@ img{
     box-sizing: border-box;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
     border-radius: 20px;
-    h3,a{ padding: 10px; }
 }
+
+.contact-info h3, .contact-info a { padding: 10px; }
 
 .contact-info button{
     position: relative;
@@ -512,9 +527,20 @@ img{
     width: 100%;
 }
 
-#linkedin-info{ background: #00B599; button{ background: #0077B5; color: antiquewhite; } ::before{ border-top: 3px solid #0077B5; border-left: 3px solid #0077B5; } :after{ border-bottom: 3px solid #0077B5; border-right: 3px solid #0077B5; } }
-#github-info{ background: #939393; button{ background: #333; color: antiquewhite; } ::before{ border-top: 3px solid #333; border-left: 3px solid #333; } :after{ border-bottom: 3px solid #333; border-right: 3px solid #333; } }
-#email-info{ background: #ED8AFF; button{ background: #9900B5; color: antiquewhite; } ::before{ border-top: 3px solid #9900B5; border-left: 3px solid #9900B5; } :after{ border-bottom: 3px solid #9900B5; border-right: 3px solid #9900B5; } }
+#linkedin-info{ background: #00B599; }
+#linkedin-info button{ background: #0077B5; color: antiquewhite; }
+#linkedin-info button::before{ border-top: 3px solid #0077B5; border-left: 3px solid #0077B5; }
+#linkedin-info button:after{ border-bottom: 3px solid #0077B5; border-right: 3px solid #0077B5; }
+
+#github-info{ background: #939393; }
+#github-info button{ background: #333; color: antiquewhite; }
+#github-info button::before{ border-top: 3px solid #333; border-left: 3px solid #333; }
+#github-info button:after{ border-bottom: 3px solid #333; border-right: 3px solid #333; }
+
+#email-info{ background: #ED8AFF; }
+#email-info button{ background: #9900B5; color: antiquewhite; }
+#email-info button::before{ border-top: 3px solid #9900B5; border-left: 3px solid #9900B5; }
+#email-info button:after{ border-bottom: 3px solid #9900B5; border-right: 3px solid #9900B5; }
 
 .contact-card:hover .contact-icon{ transform: translateY(0); border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
 .contact-card:hover .contact-info{ transform: translateY(0); border-top-left-radius: 0; border-top-right-radius: 0; }
